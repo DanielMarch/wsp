@@ -1,0 +1,15 @@
+block content
+  h1.topmatches Top Matches
+  a.viewall-matches(href='/users/matches') View All
+  .clear
+  br
+  if(matches && matches.length)
+    each match in matches
+      a.match(href='/users/#{match._id}/show' data-match-id='#{match._id}')
+        img.match-pic(style='background-image:url(#{match.primaryPhoto})')
+        .deets
+          p.match-name=match.name
+          p.match-bio=match.classification
+  else
+    .match You have no matches. Broaden your seeking designations:
+      span: a(href='/users/edit') here

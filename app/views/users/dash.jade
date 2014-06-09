@@ -1,0 +1,65 @@
+extends ../shared/template
+
+block content
+  .box
+    .profile-picture(style="background-image:url('#{user.primaryPhoto}')")
+
+
+    #profileHeader
+      h1.name= user.name
+      h4.email= user.email
+
+      span: a.edit(href='/users/edit') Edit
+
+      br
+      br
+
+      #messages
+        #messageCount
+          span: a(href='/messages/inbox')
+            i.fa.fa-envelope(style='margin-right: 10px')
+
+  .box.right
+    #userMatchSection
+      #topMatches
+
+
+  #pings
+    h3 PINGS
+
+  .clear
+
+  .bioinfo
+    h3 Bio
+    p= user.bio
+
+  .clear
+
+  //-
+  //- #bio
+  //-   .bioinfo
+  //-     h3 Bio
+  //-     p= user.bio
+  //-
+  //- .clear
+
+  #myInfo
+    .info
+      h3 IP
+      p= user.ipAddress
+    .info
+      h3 Seeking
+      p= user.seeking
+    .info
+      h3 OS
+      p= user.os
+    .info
+      h3 Languages
+      p= user.languages
+    .info
+      h3 Classification
+      p= user.classification
+
+block scripts
+  script(src='/js/es6/compiled/dashboard.js')
+  script(src='/js/es6/compiled/ping.js')

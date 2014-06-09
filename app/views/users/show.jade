@@ -1,0 +1,32 @@
+extends ../shared/template
+
+block content
+  .box
+    #user.hidden(data-id='#{user._id}')
+    h1= user.name
+    p= user.email
+
+    .profile-picture(style='background-image:url(#{user.primaryPhoto})')
+
+    #interact
+      a#send-msg(href='/messages/new/#{user._id}')
+        i.fa.fa-envelope
+      .clear
+      a#ping(href='#')
+        i.fa.fa-heart
+
+  .box
+    #bio
+      h3 BIO:
+      p= user.bio
+
+    p Languages: #{user.languages}
+    p OS: #{user.os}
+
+    h3.seeking Seeking:
+    ul.seeking-ul
+      each seek in user.seeking
+        li.seek= seek
+
+block scripts
+  script(src='/js/es6/compiled/ping.js')

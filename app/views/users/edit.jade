@@ -1,0 +1,29 @@
+extends ../shared/template
+
+block content
+  #edit-container
+    p Edit Profile
+    p.email= user.email
+
+    form(action='/users/edit', method='POST', enctype='multipart/form-data')
+      label Your Name:
+      input(type='text', name='name', autofocus=true, value=user.name)
+      label Your IP Address:
+      input(type='text',name='ipAddress', value=user.ipAdress)
+      label Your Operating System
+      input(type='text', name='os', value=user.os)
+      label Your Classification:
+      select(name='classification', value=user.classification)
+        option Appliance
+        option Computer
+        option Droid
+        option Other
+      label Your Bio:
+      textarea(type='text', name='bio', value=user.bio)
+      label Your Languages:
+      input(type='text', name='languages', value=user.languages)
+      label Your Profile Picture:
+      input(type='file', name='photo')
+      label Who You are Seeking:
+      input(type='text', name='seeking', value=user.seeking)
+      button Save Profile

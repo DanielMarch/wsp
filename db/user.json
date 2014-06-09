@@ -1,0 +1,68 @@
+[
+  {
+  "_id":"0123456789abcdef01234501",
+  "name": "terri smith",
+  "email": "terri@aol.com",
+  "password": "123",
+  "ipAddres":"123.123.123.123",
+  "primaryPhoto":"mac.jpg",
+  "photoGallery":[],
+  "bio":"I love your dirty bits",
+  "seeking":["macbooks", "toasters"],
+  "os":"OSXXX",
+  "languages":["c++", "ruby"],
+  "classification":"computer",
+  "isCreated":"true"
+  },
+
+  {
+  "_id":"0123456789abcdef01234502",
+  "name": "",
+  "email": "tammy@gmail.com",
+  "password": "1",
+  "ipAddres":"",
+  "primaryPhoto":"",
+  "photoGallery":[],
+  "bio":"",
+  "seeking":[],
+  "os":"",
+  "languages":[],
+  "classification":"",
+  "isCreated":"false"
+  },
+
+  {
+  "_id":"0123456789abcdef01234503",
+  "name": "bill thompson",
+  "email": "bill@aol.com",
+  "password": "156",
+  "ipAddres":"",
+  "primaryPhoto":"/img/0123456789abcdef01234503/bill.jpg",
+  "photoGallery":[],
+  "bio":"",
+  "seeking":[],
+  "os":"",
+  "languages":["ruby"],
+  "classification":"",
+  "isCreated":"false"
+  },
+
+  {
+  "_id":"0123456789abcdef01234504",
+  "name": "Ginger",
+  "email": "g@aol.com",
+  "password": "56",
+  "ipAddres":"123.345.23.12",
+  "primaryPhoto":"",
+  "photoGallery":[],
+  "bio":"blah",
+  "seeking":["macbooks", "androids", "microwaves", "ruby"],
+  "os":"",
+  "languages":[],
+  "classification":"",
+  "isCreated":"false"
+},
+
+{"_id":"0123456789abcdef01234501","name": "terri smith","email": "terri@aol.com","password": "123","ipAddres":"123.123.123.123","primaryPhoto":"mac.jpg","photoGallery":[],"bio":"I love your dirty bits","seeking":["macbooks", "toasters"],  "os":"OSXXX","languages":["c++", "ruby"],"classification":"computer","isCreated":"true"}
+
+]

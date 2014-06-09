@@ -1,0 +1,19 @@
+extends ../shared/template
+
+block content
+  h1 Messages Inbox
+  #inbox-wrapper
+    each message in messages
+      .message-conatiner
+        .message-details
+          .msg-from
+            p From:
+            a(href='/users/#{message.fromId}/show') #{message.fromName}
+          .msg-reply
+            a.fa.fa-reply(href='/messages/new/#{message.fromId}')
+          .msg-delete
+            form(method='POST', action='/messages/#{message._id}')
+              button.msg-delete.fa.fa-trash-o
+        .clear
+        .message-content
+          p= message.message

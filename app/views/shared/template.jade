@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title= title
+    link(href='/less/app.css', rel='stylesheet')
+    link(href='//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css', rel='stylesheet')
+
+  body
+    header
+      #header-content
+        #logo
+          a(href='/')
+            img(src='/img/assets/logo-all-white.svg')
+        nav
+          ul
+            li
+              a(href='/users/dash') Dashboard
+            li
+              a(href='/messages/inbox') Messages
+            li
+              a#search(href='#') Search
+            li
+              a(href='/users/logout') Logout
+        .clear
+    #container
+      block content
+
+    script(src='/js/vendor/jquery-2.1.1.js')
+    script(src='/js/vendor/lodash-2.4.1.js')
+    script(src='/js/vendor/moment-2.6.0.js')
+    script(src='/js/vendor/traceur.js')
+    script(src='/socket.io/socket.io.js')
+    script(src='/js/es5/main.js')
+    script(src='/js/es6/compiled/main.js')
+    script(src='/js/es6/compiled/sockets.js')
+
+    block scripts

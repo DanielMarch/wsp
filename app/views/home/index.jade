@@ -1,0 +1,149 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title= title
+    link(href='/less/app.css', rel='stylesheet')
+  body
+    #modal
+      .md-content
+        #login-register-container
+          a#btn-register(href='#') Register
+          a.btn-selected#btn-login(href='#') Login
+
+          .clear
+
+          form#form-register.hidden(action='/users/new', method='post')
+            input#register-input-email(type='text', name='email', placeholder='Email Address')
+            .clear
+            input#register-input-password(type='password', name='password', placeholder='Password')
+            .clear
+            button#submit-register Create Account
+
+          form#form-login(method='post', action='/users/login')
+            input#login-input-email(type='text', name='email', placeholder='Email Address')
+            .clear
+            input#login-input-password(type='password', name='password', placeholder='Password')
+            .clear
+            button#submit-login Login
+        a.boxclose
+    .row
+      #index-hero
+        #index-hero-content
+          .row
+            #logo
+              img(src='/img/assets/logo-white.svg')
+            #login
+              p.login-text Already a member?
+              a.md-trigger#show-login(href='#', data-modal='modal-1') LOGIN
+          .row
+            #mission-short
+              h1 The best site to find your optimal model.
+              a.md-trigger#show-register(href='#',data-modal='modal-1') SIGN UP
+
+      #index-ports
+        #index-ports-content
+          img(src='/img/assets/icon-usbs.svg')
+          .clear
+          h2.ports-joke Having trouble finding the right plug for your port?
+
+      #features
+        #feature-content
+          .feature
+            .feature-icon
+              img#mapmarker(src='/img/assets/icon-mapmarker.svg')
+            .clear
+            p.feature-text Use our site to find the best machines around. You soul mate could be just a network away.
+
+          .feature
+            .feature-icon
+              img#applexandroid(src='/img/assets/icon-applexandroid.svg')
+            .clear
+            p.feature-text Have no fear. Even the most star-crossed platforms can find love here on SquarePeg.
+
+          .feature
+            .feature-icon
+              img#firewire(src='/img/assets/icon-firewire.svg')
+            .clear
+            p.feature-text Query our database to find your ideal matches. The fire will surely spark, safely of course.
+
+          .clear
+
+          #mission
+            p#mission-blurb SquarePeg is a site all about connections. We connect you to those who fit you best. Our goal is to is to provide a safe and fun networking space for machines of all kinds. Robots, computers, even toasters. There is a compatible partner for each and every one.
+
+          #meettheteam
+            #meettheteam-content
+              h2#meet MEET THE TEAM BEHIND SQUAREPEG
+              .member
+                img.biopic(src='/img/biopics/test.png')
+                .clear
+                a(href='http://www.github.com')
+                  img.icon-github(src='/img/assets/icon-github.svg')
+                  p.member-name Bob Paterno
+
+              .member
+                img.biopic(src='/img/biopics/test.png')
+                .clear
+                a(href='http://www.github.com')
+                  img.icon-github(src='/img/assets/icon-github.svg')
+                  p.member-name Alex Sejdinaj
+
+              .member
+                img.biopic(src='/img/biopics/test.png')
+                .clear
+                a(href='http://www.github.com')
+                  img.icon-github(src='/img/assets/icon-github.svg')
+                  p.member-name Terrence Jones
+
+              .member
+                img.biopic(src='/img/biopics/test.png')
+                .clear
+                a(href='http://www.github.com')
+                  img.icon-github(src='/img/assets/icon-github.svg')
+                  p.member-name Seth March
+
+              .member
+                img.biopic(src='/img/biopics/test.png')
+                .clear
+                a(href='http://www.github.com')
+                  img.icon-github(src='/img/assets/icon-github.svg')
+                  p.member-name Aaron Johnson
+
+        #get-started
+          h1 Excited yet?
+          a#getstarted(href='#') JOIN TODAY!
+
+      //- #modal-1.md-modal.md-effect-1
+      //-   .md-content
+      //-     #login-register-container
+      //-       a#btn-register(href='#') Register
+      //-       a#btn-login(href='#') Login
+      //-
+      //-       .clear
+      //-
+      //-       form#form-register(action='/users/new', method='post')
+      //-         input#register-input-email(type='text', name='email', placeholder='Email Address')
+      //-         .clear
+      //-         input#register-input-password(type='password', name='password', placeholder='Password')
+      //-         .clear
+      //-         button#submit-register Create Account
+      //-
+      //-       form#form-login(method='post', action='/users/login')
+      //-         input#login-input-email(type='text', name='email', placeholder='Email Address')
+      //-         .clear
+      //-         input#login-input-password(type='password', name='password', placeholder='Password')
+      //-         .clear
+      //-         button#submit-login Login
+      //- .md-overlay
+
+  script(src='/js/vendor/classie.js')
+  script(src='/js/vendor/modalEffects.js')
+  script(src='/js/vendor/jquery-2.1.1.js')
+  script(src='/js/vendor/lodash-2.4.1.js')
+  script(src='/js/vendor/moment-2.6.0.js')
+  script(src='/js/vendor/traceur.js')
+  script(src='/socket.io/socket.io.js')
+  script(src='/js/es5/main.js')
+  script(src='/js/es6/compiled/main.js')
+  script(src='/js/es6/compiled/sockets.js')

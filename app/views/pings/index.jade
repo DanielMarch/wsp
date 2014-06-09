@@ -1,0 +1,7 @@
+each ping in pings
+  .ping
+    a(href='/users/#{ping.fromId}/show')
+      .from-pic(style='background-image:url(#{ping.fromPic})')
+    .delete-ping
+      form(method='POST', action='/pings/#{ping._id}')
+        a.pingclose
